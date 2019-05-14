@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="com.polushkina.inna.controller.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="830.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <TabPane layoutX="36.0" layoutY="49.0" prefHeight="746.0" prefWidth="748.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Main Menu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="713.0" prefWidth="748.0">
+                     <children>
+                        <TableView fx:id="tableAllProductsData" layoutX="12.0" layoutY="63.0" onMouseClicked="#setDataIntoUpdateField" prefHeight="220.0" prefWidth="725.0">
+                          <columns>
+                            <TableColumn fx:id="idProduct" prefWidth="89.0" text="ID" />
+                            <TableColumn fx:id="nameProduct" prefWidth="139.0" text="Name" />
+                              <TableColumn fx:id="produceProduct" prefWidth="133.0" text="Producer" />
+                              <TableColumn fx:id="priceProduct" prefWidth="113.0" text="Price" />
+                              <TableColumn fx:id="lifeProduct" prefWidth="171.0" text="Shelf life" />
+                              <TableColumn fx:id="countProduct" prefWidth="79.0" text="Count" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="40.0" layoutY="329.0" text="Add product">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="535.0" text="Update product data">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addButton" layoutX="40.0" layoutY="466.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="37.0" prefWidth="82.0" text="Add" />
+                        <TextField fx:id="nameAddTextField" layoutX="41.0" layoutY="407.0" prefHeight="25.0" prefWidth="81.0" promptText="name" />
+                        <TextField fx:id="producerAddTextField" layoutX="141.0" layoutY="407.0" prefHeight="25.0" prefWidth="90.0" promptText="producer" />
+                        <TextField fx:id="priceAddTextField" layoutX="255.0" layoutY="407.0" prefHeight="25.0" prefWidth="99.0" promptText="100" />
+                        <TextField fx:id="lifeAddTextField" layoutX="371.0" layoutY="407.0" prefHeight="25.0" prefWidth="102.0" promptText="2020-12-12" />
+                        <TextField fx:id="countAddTextField" layoutX="490.0" layoutY="407.0" prefHeight="25.0" prefWidth="73.0" promptText="1" />
+                        <Label fx:id="errorAddMessageLabel" layoutX="217.0" layoutY="476.0" text="Error message" textFill="#fc0505">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="376.0" text="Name" />
+                        <Label layoutX="141.0" layoutY="376.0" text="Producer" />
+                        <Label layoutX="255.0" layoutY="376.0" text="Price" />
+                        <Label layoutX="376.0" layoutY="376.0" text="Shelf life" />
+                        <Label layoutX="490.0" layoutY="376.0" text="Count" />
+                        <Button fx:id="updateButton" layoutX="40.0" layoutY="668.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="37.0" prefWidth="82.0" text="Update" />
+                        <TextField fx:id="nameUpdateTextField" layoutX="41.0" layoutY="609.0" prefHeight="25.0" prefWidth="81.0" />
+                        <TextField fx:id="producerUpdateTextField" layoutX="141.0" layoutY="609.0" prefHeight="25.0" prefWidth="90.0" />
+                        <TextField fx:id="priceUpdateTextField" layoutX="255.0" layoutY="609.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField fx:id="lifeUpdateTextField" layoutX="371.0" layoutY="609.0" prefHeight="25.0" prefWidth="102.0" promptText="2020-12-12" />
+                        <TextField fx:id="countUpdateTextField" layoutX="516.0" layoutY="612.0" prefHeight="25.0" prefWidth="73.0" />
+                        <Label fx:id="erroUpdatemessageLabel" layoutX="217.0" layoutY="678.0" text="Error message" textFill="#fc0505">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="578.0" text="Name" />
+                        <Label layoutX="141.0" layoutY="578.0" text="Producer" />
+                        <Label layoutX="255.0" layoutY="578.0" text="Price" />
+                        <Label layoutX="371.0" layoutY="578.0" text="Shelf life" />
+                        <Label layoutX="516.0" layoutY="581.0" text="Count" />
+                        <Button fx:id="removeButton" layoutX="598.0" layoutY="291.0" mnemonicParsing="false" onAction="#removeProduct" prefHeight="38.0" prefWidth="139.0" text="Remove selected" />
+                        <Label layoutX="275.0" layoutY="14.0" text="All data about products" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="374.0" layoutY="637.0" text="Formate xxxx-xx-xx" />
+                        <Label layoutX="372.0" layoutY="441.0" text="Formate xxxx-xx-xx" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Search Menu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableSearchProductsData" layoutX="12.0" layoutY="403.0" prefHeight="259.0" prefWidth="725.0">
+                           <columns>
+                              <TableColumn fx:id="idProductSearch" prefWidth="89.0" text="ID" />
+                              <TableColumn fx:id="nameProductSerach" prefWidth="139.0" text="Name" />
+                              <TableColumn fx:id="producerProductSerach" prefWidth="133.0" text="Producer" />
+                              <TableColumn fx:id="priceProductSearch" prefWidth="113.0" text="Price" />
+                              <TableColumn fx:id="lifeProductSerach" prefWidth="171.0" text="Shelf life" />
+                              <TableColumn fx:id="countProductSearch" prefWidth="79.0" text="Count" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="nameSearchTextField" layoutX="31.0" layoutY="126.0" promptText="name" />
+                        <TextField fx:id="priceSearchByPriceTextField" layoutX="206.0" layoutY="243.0" promptText="123" />
+                        <TextField fx:id="searchByLifeTextField" layoutX="31.0" layoutY="318.0" promptText="2020-12-12" />
+                        <Label layoutX="31.0" layoutY="95.0" text="Search by name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="175.0" text="Serach by price than less">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="errorMessageLabel" layoutX="445.0" layoutY="113.0" text="Error message" textFill="#ff0707">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="searchByNameButton" layoutX="228.0" layoutY="126.0" mnemonicParsing="false" onAction="#searchByName" text="Search" />
+                        <Button fx:id="searchByPriceButton" layoutX="382.0" layoutY="243.0" mnemonicParsing="false" onAction="#searchByNameAndPrice" text="Search" />
+                        <Button fx:id="searchByLifeButton" layoutX="228.0" layoutY="318.0" mnemonicParsing="false" onAction="#searchByLife" text="Search" />
+                        <Label layoutX="280.0" layoutY="28.0" text="Serach product by criterion">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameSearchByPriceTextField" layoutX="31.0" layoutY="243.0" promptText="name" />
+                        <Label layoutX="31.0" layoutY="215.0" text="Name" />
+                        <Label layoutX="214.0" layoutY="215.0" text="Price" />
+                        <Label layoutX="31.0" layoutY="280.0" text="Serach by shell life more ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="311.0" layoutY="360.0" text="Resul of search">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="userMessageLabel" layoutX="548.0" layoutY="322.0" text="User message" textFill="#111111">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="321.0" layoutY="14.0" prefHeight="35.0" prefWidth="201.0" text="Products App">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="802.0" text="Created by Inna Polushkina" />
+   </children>
+</AnchorPane>

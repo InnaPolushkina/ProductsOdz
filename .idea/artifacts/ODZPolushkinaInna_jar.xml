@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ODZPolushkinaInna:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ODZPolushkinaInna_jar</output-path>
+    <root id="archive" name="ODZPolushkinaInna.jar">
+      <element id="module-output" name="ODZPolushkinaInna" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ojdbc6-12.1.0.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
