@@ -14,7 +14,7 @@ public class Main extends Application {
 
    @Override
     public void start(Stage primaryStage) throws Exception{
-       Parent root = FXMLLoader.load(getClass().getResource("../view/sample.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("/com/polushkina/inna/view/sample.fxml"));
        primaryStage.setTitle("Products");
        primaryStage.setScene(new Scene(root, 900, 820));
        primaryStage.show();
